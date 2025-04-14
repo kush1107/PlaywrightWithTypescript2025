@@ -4,6 +4,7 @@ test("Test to handle WindowTabs",async ({page})=>{
 
     await page.goto('https://www.lambdatest.com/selenium-playground/window-popup-modal-demo'); // navigating to url
    
+    //Handling - single new window tab
   const [NewWindowTab] = await Promise.all([
         page.waitForEvent('popup'),
         page.click("'Follow On Twitter'")
@@ -13,6 +14,7 @@ test("Test to handle WindowTabs",async ({page})=>{
     console.log(NewWindowTab.url());
     await NewWindowTab.close();
 
+    //Handling - multi window tabs
     const [MultiWindowTab] = await Promise.all([
         page.waitForEvent('popup'),
         page.click("#followboth")
@@ -20,9 +22,11 @@ test("Test to handle WindowTabs",async ({page})=>{
 
     await MultiWindowTab.waitForLoadState();
 
+    //print no. of window tabs
     const pages = await MultiWindowTab.context().pages();
     console.log("No. of pages : "+pages.length);
 
+    //switch to specific  window tab
     for (const tab of pages) {
         const tabUrl = tab.url();
         console.log("Tab URL: " + tabUrl);
