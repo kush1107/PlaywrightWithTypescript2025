@@ -7,7 +7,6 @@ test("Test to handle Dropdowns",async ({page})=>{
     await page.waitForLoadState('domcontentloaded'); //waiting for DOM to get loaded
 
    await page.locator("#fruits").selectOption({ label: 'Apple' });; // using label or visible text
-
    await page.locator("//select[@id='superheros']").selectOption('Batman'); // using label or visible text
 
    await page.waitForTimeout(2000); //adding timeout to see actions
@@ -34,13 +33,9 @@ test("Test to handle Dropdowns",async ({page})=>{
     const deafaultSelectedValue = await dropdown.inputValue();
     console.log(`Default selected value: ${deafaultSelectedValue}`)
 
-
    // Select "India" using the value attribute
-
    await dropdown.selectOption({ value: 'India' }); // Replace 'india' with the actual value attribute
-
    // Get the selected option text
    const selectedValue = await dropdown.inputValue();
    console.log(`Selected value: ${selectedValue}`);
-
 })
