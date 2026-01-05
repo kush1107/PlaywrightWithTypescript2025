@@ -1,6 +1,6 @@
-import { expect, test, chromium } from "@playwright/test";
+import { expect, test, chromium, Page } from "@playwright/test";
 
-let page;
+let page: Page;
 
 test.beforeEach(async ({browser}) => {
     page = await browser.newPage();
