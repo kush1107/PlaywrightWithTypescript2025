@@ -19,7 +19,7 @@ test('File Download using Playwright', async ({ page, context }) => {
     ]);
 
     // Save the downloaded file to a desired path
-    const downloadPath = './downloads/Lambdainfo.txt';
+    const downloadPath = './tests/playwright_Tutorials2025/downloads/Lambdainfo.txt';
     await download.saveAs(downloadPath);
 
     // Verify the file exists

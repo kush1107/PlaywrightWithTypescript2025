@@ -6,7 +6,7 @@ test('File upload example', async ({ page }) => {
     await page.goto('https://www.lambdatest.com/selenium-playground/upload-file-demo');
 
     // Path to the file to upload
-    const filePath = path.resolve(__dirname, '../testData/PlaywrightFileUploadDemo.png');
+    const filePath = path.resolve(__dirname, 'testData/PlaywrightFileUploadDemo.png');
 
     // Upload the file
     await page.setInputFiles("//input[@id='file']", filePath);
@@ -14,5 +14,5 @@ test('File upload example', async ({ page }) => {
     // Assert the file was uploaded
     await expect(page.locator('#error')).toHaveText('File Successfully Uploaded');
 
-    page.close();
+    //page.close(); - to clsoe the browser
 });

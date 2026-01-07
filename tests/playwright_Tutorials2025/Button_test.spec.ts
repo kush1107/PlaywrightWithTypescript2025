@@ -27,4 +27,6 @@ test("Tests to handle Button", async ({ page }) => {
     await page.waitForTimeout(2000); // Hold for 2 seconds
     await page.mouse.up();
     console.log("Clicked and hold the button.");
+
+    //await page.close(); // to close the browser
 });

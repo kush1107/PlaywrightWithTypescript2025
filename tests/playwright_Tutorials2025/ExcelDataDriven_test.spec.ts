@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import * as ExcelJs from 'exceljs';
 
 // Constants
-const excelFilePath = './testData/ExcelTestData.xlsx'; // ✅ FIXED PATH
+const excelFilePath = './tests/playwright_Tutorials2025/testData/ExcelTestData.xlsx'; // ✅ FIXED PATH
 const sheetName = 'TestData1'; // ✅ Your Sheet Name
 
 // Utility function to read Excel data

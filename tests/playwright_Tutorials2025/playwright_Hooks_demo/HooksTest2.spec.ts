@@ -21,11 +21,10 @@ test.afterAll(async () => {
     
 });
 
-
     test("Adding Product -1 to Cart & Checkout ", async () => {
         console.log("Adding Product -1 to Cart & Checkout");
         await page.locator("//a[normalize-space()='Sauce Labs Backpack']").click();
-        await page.locator("#add-to-cart",{ state: 'attached' }).click();
+        await page.locator("#add-to-cart").click();
         await page.locator(".shopping_cart_link").click();
         await page.locator("#checkout").click();
         await page.locator("//input[@id='first-name']").fill("Kushal");
@@ -41,7 +40,7 @@ test.afterAll(async () => {
         await page.waitForLoadState('domcontentloaded');
         console.log("Adding Product -2 to Cart & Checkout");
         await page.locator("//a[normalize-space()='Sauce Labs Fleece Jacket']").click();
-        await page.locator("#add-to-cart",{ state: 'attached' }).click();
+        await page.locator("#add-to-cart").click();
         await page.locator(".shopping_cart_link").click();
         await page.locator("#checkout").click();
         await page.locator("//input[@id='first-name']").fill("Kushal");
@@ -57,7 +56,7 @@ test.afterAll(async () => {
         await page.waitForLoadState('domcontentloaded');
         console.log("Adding Product -3 to Cart & Checkout");
         await page.locator("//a[normalize-space()='Sauce Labs Bolt T-Shirt']").click();
-        await page.locator("#add-to-cart",{ state: 'attached' }).click();
+        await page.locator("#add-to-cart").click();
         await page.locator(".shopping_cart_link").click();
         await page.locator("#checkout").click();
         await page.locator("//input[@id='first-name']").fill("Kushal");
