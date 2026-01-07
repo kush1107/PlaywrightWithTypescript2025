@@ -10,6 +10,10 @@ test.describe('Register Tests - Valid Data', () => { { mode: 'serial' }
     await registerPage.goto('https://rahulshettyacademy.com/client/#/auth/register');
   });
 
+  test.afterEach(async ({ page }) => {
+    await page.close();
+  });
+
   test('User should be able to register with valid data', async ({ page }) => {
 
     await registerPage.register({

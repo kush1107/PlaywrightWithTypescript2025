@@ -1,8 +1,6 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="7.368040999999969">
-<testsuite name="webApp_Demo\module\RegisterTests\RegisterValid.spec.ts" timestamp="2026-01-07T21:30:43.818Z" hostname="Chrome" tests="2" failures="0" skipped="0" time="5.457" errors="0">
-<testcase name="Register Tests - Valid Data › User should be able to register with valid data" classname="webApp_Demo\module\RegisterTests\RegisterValid.spec.ts" time="3.088">
-</testcase>
-<testcase name="Register Tests - Valid Data › User should see error if account already exists" classname="webApp_Demo\module\RegisterTests\RegisterValid.spec.ts" time="2.369">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="5.56163500000001">
+<testsuite name="webApp_Demo\module\loginTests\LoginValid.spec.ts" timestamp="2026-01-07T21:40:42.651Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="3.794" errors="0">
+<testcase name="Login Tests - Valid Credentials › User should be able to login with valid credentials" classname="webApp_Demo\module\loginTests\LoginValid.spec.ts" time="3.794">
 </testcase>
 </testsuite>
 </testsuites>
