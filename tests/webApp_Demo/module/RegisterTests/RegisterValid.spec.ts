@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { RegisterPage } from '../../../../pages/RegisterPage';
+import config from '../../../../playwright.config';
+const baseURL = config.use?.baseURL || '';
 
 test.describe('Register Tests - Valid Data', () => { { mode: 'serial' }
 
@@ -7,7 +9,7 @@ test.describe('Register Tests - Valid Data', () => { { mode: 'serial' }
 
   test.beforeEach(async ({ page }) => {
     registerPage = new RegisterPage(page);
-    await registerPage.goto('https://rahulshettyacademy.com/client/#/auth/register');
+    await registerPage.goto(baseURL);
   });
 
   test.afterEach(async ({ page }) => {
